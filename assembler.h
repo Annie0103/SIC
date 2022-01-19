@@ -10,11 +10,14 @@ class assembler{
 	public: 
 		void passOne();
 		void passTwo();
-		void output();
+		void outputRecord();
 	
 	private:
 		int LOCCTR;//紀錄record長度、
-		//vector<OPTAB> opTab;
+		void assignLoc();
+		void hexToBinary(std::string &);
+		void binaryToHex();
+		void caculateObjCode();
 	
 };
 

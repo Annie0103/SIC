@@ -1,6 +1,7 @@
 #ifndef FILE_H
 #define FILE_H
 
+#include <instruction>
 class file{//讀黨+分配type?+opcode map
 	void readsource(){
 		string line;
@@ -76,7 +77,7 @@ class file{//讀黨+分配type?+opcode map
 		}
 	}
 	std::vector<string> insBuffer;
-	std::vector<intruction> allins;
+	std::vector<instruction> allins;
 	
 };
 	

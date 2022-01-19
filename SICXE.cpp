@@ -10,7 +10,8 @@
 #include <string>
 #include <string.h>
 #include <sstream>
-using namespace std;
+#include <map>
+// using namespace std;
 
 std::map<std::string, std::string> opMap;
 string op_TAB[] = { "ADD", "ADDF", "ADDR", "AND", "CLEAR", "COMP", "COMPF", "COMPR", "DIV", "DIVF", "DIVR",
@@ -28,6 +29,10 @@ int main(){
 	std::vector<std::string> label;
 	std::vector<std::string> statement;
 	
+	std::map<string, string> optable;
+	for (int i = 0; i < op_TAB.length(); ++i) {
+		optable.insert(op_TAB[i], opCode[i]);
+	}
 	/*std::ifstream ifs("SIC.txt",std::ios::in);
 	//if(!ifs.is_open){
 	//	cout<<"fail"<<endl;

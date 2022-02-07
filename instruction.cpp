@@ -1,4 +1,5 @@
 #include "instruction.h"
+#include <iostream>
 void instruction::bpchange() {
 	b = '1';
 	p = '0';
@@ -7,11 +8,11 @@ void instruction::format4Check() {//for opcode
 	if (opCode.find("+") != std::string::npos) {//若有, format4
 		e = '1';
 		format = 4;
-
+		opCode = opCode.erase(0, opCode.find_first_not_of("+"));
 	}
 }
-
 void instruction::markCheck() {//for statement
+    format4Check();
 	if (statement.find(",") != std::string::npos) {//若有, x=1 else =0
 		size_t pos = statement.find(",");
 		char tmp1 = statement[0];
@@ -63,7 +64,10 @@ void instruction::markCheck() {//for statement
 		//擷取''中的東西
 		while (statement[p] != '\'') {
 			tmp += statement[p];
+			p++;
+			litlength++;
 		}
+
 		statement = tmp;
 	}
 	else if (statement[0] == 'X' && statement[1] == '\'') {
@@ -71,7 +75,10 @@ void instruction::markCheck() {//for statement
 		int p = 2;
 		while (statement[p] != '\'') {
 			tmp += statement[p];
+			p++;
+			litlength++;
 		}
+		litlength/=2;
 		statement = tmp;
 	}
 }

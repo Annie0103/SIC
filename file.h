@@ -15,6 +15,5 @@ class file{//讀黨+分配type?+opcode map
 		static std::vector<instruction> allins;
 		void writeFile(std::vector<std::string> object);
 };
-std::vector<std::string> file::insBuffer;
-std::vector<instruction> file::allins;
+
 #endif

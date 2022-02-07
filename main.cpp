@@ -10,9 +10,13 @@ int main(){
     file F;
     assembler A;
 	F.readsource();
+
 	A.passOne();
+
 	A.passTwo();
-	A.outputRecord();
+	//A.outputRecord();
+
+	system("pause");
 
 	return 0;
 }

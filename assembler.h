@@ -6,6 +6,11 @@
 #include <map>
 #include "symboltable.h"
 
+struct op{
+    std::string mnemonic;
+    std::string opcode;
+    std::string format;
+};
 class assembler{
 
 	public:
@@ -17,18 +22,20 @@ class assembler{
 	private:
 		int LOCCTR;//紀錄record長度
 		int length;
+		std::string Record;
 		std::string base = "0000";
 		void assignLoc();
 		void hexToBinary(std::string &);
 		std::string binaryToHex(std::string&);
-		void decimalToHex(int&);
+		std::string  decimalToHex(int);
 		std::string decimalToBinary(int);
+		int hexToDec(std::string);
 		void caculateObjCode();
 		void directive();
 		int stringToInt(std::string s);
 		std::string intToString(int num);
 		void Modify();
-		std::map<std::string, std::string> opMap;
+		std::map<std::string, op> opMap;
 		void opcodemap();
         std::map<std::string, SYMTAB> symbolTable;
 		std::vector<std::string> op_TAB = { "ADD", "ADDF", "ADDR", "AND", "CLEAR", "COMP", "COMPF", "COMPR", "DIV", "DIVF", "DIVR",

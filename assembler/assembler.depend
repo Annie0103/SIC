@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1642622668 source:c:\users\annie\desktop\sic\sic\instruction.cpp
+	"instruction.h"
+	<iostream>
+
+1642620861 c:\users\annie\desktop\sic\sic\instruction.h
+	<string>
+	<vector>
+	<map>
+	"symboltable.h"
+
+1642611359 source:c:\users\annie\desktop\sic\sic\file.cpp
+	"file.h"
+	<fstream>
+	<iostream>
+	<sstream>
+	<stdlib.h>
+	<vector>
+	<cstring>
+	"instruction.h"
+	<iterator>
+
+1642609245 c:\users\annie\desktop\sic\sic\file.h
+	<fstream>
+	<iostream>
+	<sstream>
+	<stdlib.h>
+	<vector>
+	"instruction.h"
+
+1642636522 source:c:\users\annie\desktop\sic\sic\main.cpp
+	<iostream>
+	"assembler.h"
+	"file.h"
+	<map>
+
+1642635998 c:\users\annie\desktop\sic\sic\assembler.h
+	<string>
+	<vector>
+	<map>
+	"symboltable.h"
+
+1642636579 source:c:\users\annie\desktop\sic\sic\assembler.cpp
+	"assembler.h"
+	"file.h"
+	<vector>
+	<iostream>
+	<string>
+	<sstream>
+
+1642608070 c:\users\annie\desktop\sic\sic\symboltable.h
+
